@@ -14,7 +14,7 @@ export interface Genre {
 //   results: Genre[];
 // }
 
-const useGenres = () => useData<Genre>("/genre");
+const useGenres = () => useData<Genre>("genres");
 
 // const useGames = () => {
 //   const [genres, setGenres] = useState<Genre[]>([]);
