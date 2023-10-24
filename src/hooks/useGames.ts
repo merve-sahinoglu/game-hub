@@ -27,7 +27,13 @@ interface Platform {
 const useGames = (query: GameQuery) =>
   useData<Game>(
     "games",
-    { params: { genres: query.genre?.id, platforms: query.platform?.id } },
+    {
+      params: {
+        genres: query.genre?.id,
+        platforms: query.platform?.id,
+        ordering: query.sortOrder,
+      },
+    },
     [query]
   );
 
